@@ -7,6 +7,9 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "dotenv-safe": "^8.2.0",
+    "isomorphic-fetch": "^2.2.1",
     "koa": "^2.12.0",
     "koa-bodyparser": "^4.3.0",
     "koa-cors": "^0.0.16",
@@ -14,5 +17,17 @@
     "koa-multer": "^1.0.2",
     "koa-router": "^8.0.8",
     "mongoose": "^5.9.14"
+  },
+  "devDependencies": {
+    "@rest-api/babel": "*",
+    "babel-loader": "^8.0.6",
+    "reload-server-webpack-plugin": "^1.0.1",
+    "webpack": "4.39.1",
+    "webpack-cli": "3.3.6",
+    "webpack-node-externals": "1.7.2",
+    "webpack-plugin-serve": "0.12.0"
+  },
+  "scripts": {
+    "start": "webpack --watch --progress --config webpack.config.server.js"
   }
 }
