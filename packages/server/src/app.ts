@@ -4,9 +4,9 @@ import logger from 'koa-logger';
 import Router from 'koa-router';
 import cors from 'koa-cors';
 
-import {OK} from "./common/consts";
-
 import { version } from '../package.json';
+
+import { OK } from './common/consts';
 
 const app = new Koa();
 
@@ -21,11 +21,11 @@ app.use(bodyParser());
 // routerOpen.get('status', status.GET);
 // routerOpen.get('/api/status', status.GET);
 routerOpen.get('/api/version', ctx => {
-    ctx.status = 200;
-    ctx.body = {
-        satus: OK,
-        message: version,
-    };
+  ctx.status = 200;
+  ctx.body = {
+    satus: OK,
+    message: version,
+  };
 });
 app.use(routerOpen.routes());
 
@@ -38,7 +38,7 @@ app.use(routerAuth.routes());
 
 // Default not found 404
 app.use(ctx => {
-    ctx.status = 404;
+  ctx.status = 404;
 });
 
 export default app;
