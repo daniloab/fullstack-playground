@@ -1,10 +1,11 @@
 import { User } from '../../../models';
 import { ERROR } from '../../../common/consts';
+import { getUserByEmail } from '../userUtils';
 
 const userSignUp = async ctx => {
   const { name, email, password } = ctx.request.body;
 
-  const hasUser = (await User.countDocuments({ email: email.trim().toLowerCase() })) > 0;
+  const hasUser = getUserByEmail(email);
 
   if (hasUser) {
     ctx.status = 400;
