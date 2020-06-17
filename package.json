@@ -98,6 +98,10 @@
     "server": "yarn workspace @rest-api/server start"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3"
+    "bcryptjs": "^2.4.3",
+    "jest-environment-node": "^26.0.1",
+    "jest-fetch-mock": "^3.0.3",
+    "mongodb-memory-server-global": "^6.6.1",
+    "supertest": "^4.0.2"
   }
 }
