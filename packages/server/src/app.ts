@@ -7,6 +7,7 @@ import cors from 'koa-cors';
 import { version } from '../package.json';
 
 import { OK } from './common/consts';
+import userSignUp from './api/user/v1/userSignUp';
 
 const app = new Koa();
 
@@ -27,6 +28,9 @@ routerOpen.get('/api/version', ctx => {
     message: version,
   };
 });
+
+routerOpen.post('/signup', userSignUp);
+
 app.use(routerOpen.routes());
 
 //Authorized APIs
