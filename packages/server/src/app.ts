@@ -24,7 +24,7 @@ app.use(bodyParser());
 routerOpen.get('/api/version', ctx => {
   ctx.status = 200;
   ctx.body = {
-    satus: OK,
+    status: OK,
     message: version,
   };
 });
