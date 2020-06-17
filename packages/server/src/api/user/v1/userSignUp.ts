@@ -5,7 +5,7 @@ import { getUserByEmail } from '../userUtils';
 const userSignUp = async ctx => {
   const { name, email, password } = ctx.request.body;
 
-  const hasUser = getUserByEmail(email);
+  const hasUser = await getUserByEmail(email);
 
   if (hasUser) {
     ctx.status = 400;

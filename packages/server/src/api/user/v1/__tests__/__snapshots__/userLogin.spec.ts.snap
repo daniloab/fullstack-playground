@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should made login if user exists and password is correct 1`] = `"Login successful"`;
+
+exports[`should not login if user exists but password is incorrect 1`] = `
+Object {
+  "message": "Email or password incorrect",
+  "status": "ERROR",
+  "token": null,
+}
+`;
+
+exports[`should not to do login if user not exists 1`] = `
+Object {
+  "message": "Email or password incorrect",
+  "status": "ERROR",
+  "user": null,
+}
+`;
