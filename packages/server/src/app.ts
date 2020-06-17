@@ -29,7 +29,7 @@ routerOpen.get('/api/version', ctx => {
   };
 });
 
-routerOpen.post('/signup', userSignUp);
+routerOpen.post('/api/user/v1/signup', userSignUp);
 
 app.use(routerOpen.routes());
 

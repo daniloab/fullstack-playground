@@ -1,7 +1,7 @@
 import { User } from '../../../models';
 import { ERROR } from '../../../common/consts';
 
-const userSignUp = async (ctx, next) => {
+const userSignUp = async ctx => {
   const { name, email, password } = ctx.request.body;
 
   const hasUser = (await User.countDocuments({ email: email.trim().toLowerCase() })) > 0;
@@ -35,7 +35,6 @@ const userSignUp = async (ctx, next) => {
   ctx.body = {
     message: 'User successfully created',
   };
-  next();
 
   return;
 };
