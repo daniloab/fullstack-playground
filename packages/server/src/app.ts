@@ -8,6 +8,7 @@ import { version } from '../package.json';
 
 import { OK } from './common/consts';
 import userSignUp from './api/user/v1/userSignUp';
+import userLogin from './api/user/v1/userLogin';
 
 const app = new Koa();
 
@@ -30,6 +31,7 @@ routerOpen.get('/api/version', ctx => {
 });
 
 routerOpen.post('/api/user/v1/signup', userSignUp);
+routerOpen.post('/api/user/v1/login', userLogin);
 
 app.use(routerOpen.routes());
 

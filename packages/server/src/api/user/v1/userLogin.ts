@@ -8,7 +8,7 @@ import { generateToken } from '../../../auth/auth';
 const userLogin = async ctx => {
   const { email, password } = ctx.request.body;
 
-  const user = getUserByEmail(email);
+  const user = await getUserByEmail(email);
 
   if (!user) {
     ctx.status = 400;
@@ -20,7 +20,7 @@ const userLogin = async ctx => {
     return;
   }
 
-  if (await bcrypt.compare(ctx.request.body.password, password)) {
+  if (await bcrypt.compare(password, user.password)) {
     ctx.status = 200;
     ctx.body = {
       message: 'Login successful',
