@@ -1,4 +1,9 @@
+import jwt from 'jsonwebtoken';
+
 import { ERROR } from '../common/consts';
+
+import { IUser } from '../models';
+import { config } from '../config';
 
 import getToken from './getToken';
 
@@ -30,3 +35,7 @@ const auth = (ctx, next) => {
 };
 
 export default auth;
+
+export const generateToken = (user: IUser) => {
+  return `JWT ${jwt.sign({ id: user._id }, config.JWT_SECRET)}`;
+};
