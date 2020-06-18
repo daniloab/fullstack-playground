@@ -11,3 +11,15 @@ export const getUserByEmail = async (email: string) => {
 
   return user;
 };
+
+export const getUserById = async (id: string) => {
+  if (!id) {
+    return false;
+  }
+
+  const user = await User.findOne({
+    _id: id,
+  });
+
+  return user;
+};
