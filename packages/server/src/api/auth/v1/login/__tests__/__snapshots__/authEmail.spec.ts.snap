@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return error if domain not found 1`] = `
+Object {
+  "message": "Tenant not found",
+  "status": "ERROR",
+}
+`;
+
+exports[`should return error if tenant is inactivated 1`] = `
+Object {
+  "message": "Tenant not found",
+  "status": "ERROR",
+}
+`;
+
+exports[`should return error if user not found 1`] = `
+Object {
+  "message": "Email or password incorrect",
+  "status": "ERROR",
+  "user": null,
+}
+`;
+
+exports[`should return success if user found 1`] = `
+Object {
+  "message": "Email successful",
+}
+`;

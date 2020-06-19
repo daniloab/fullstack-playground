@@ -1,5 +1,7 @@
-import mongoose, { Document, Model } from 'mongoose';
+import mongoose, { Document, Model, Types } from 'mongoose';
 import bcrypt from 'bcryptjs';
+
+const { ObjectId } = mongoose.Schema.Types;
 
 const UserSchema = new mongoose.Schema(
   {
@@ -16,6 +18,14 @@ const UserSchema = new mongoose.Schema(
       type: String,
       hidden: true,
     },
+    tenant: {
+      type: ObjectId,
+      ref: 'Tenant',
+      description: 'Tenant that this document belongs to',
+      required: true,
+      index: true,
+      es_indexed: true,
+    },
   },
   {
     timestamps: {
@@ -30,6 +40,7 @@ export interface IUser extends Document {
   name: string;
   email: string;
   password: string;
+  tenant: Types.ObjectId;
   authenticate: (plainTextPassword: string) => boolean;
   encryptPassword: (password: string | undefined) => string;
   createdAt: Date;

@@ -2,63 +2,40 @@ import jwt from 'jsonwebtoken';
 
 import { ERROR } from '../common/consts';
 
-import { IUser } from '../models';
+import { ITenant, IUser } from '../models';
 import { config } from '../config';
 
-import { getUserById } from '../api/user/userUtils';
-
-import getToken from './getToken';
+import { getUser } from './sessionManagement';
 
 export type AuthContext = {
   user: IUser;
 };
 
-// eslint-disable-next-line
 const auth = async (ctx, next) => {
-  const { authorization } = ctx;
+  const { authorization, domainname } = ctx.header;
 
-  if (!authorization) {
+  const result = await getUser(authorization, domainname);
+
+  const { unauthorized, user, tenant, message } = result;
+
+  if (unauthorized) {
     ctx.status = 401;
     ctx.body = {
       status: ERROR,
-      message: 'Missing Authorization Token',
-    };
-
-    return;
-  }
-
-  const result = getToken(authorization);
-
-  if (result == null) {
-    ctx.status = 401;
-    ctx.body = {
-      status: ERROR,
-      message: 'Invalid Token',
-    };
-
-    return;
-  }
-
-  const { userId } = result;
-  const user = await getUserById(userId);
-
-  // UnAuthorized
-  if (user == null) {
-    ctx.status = 401;
-    ctx.body = {
-      status: ERROR,
-      message: 'Unauthorized',
+      message,
     };
 
     return;
   }
 
   ctx.user = user;
+  ctx.tenant = tenant;
+
   await next();
 };
 
 export default auth;
 
-export const generateToken = (user: IUser) => {
-  return `JWT ${jwt.sign({ id: user._id, email: user.email }, config.JWT_SECRET)}`;
+export const generateToken = (tenant: ITenant, user: IUser) => {
+  return `JWT ${jwt.sign({ tenant: tenant._id, user: user._id }, config.JWT_SECRET)}`;
 };
