@@ -26,5 +26,5 @@ it('should return getToken result for valid token with base64', () => {
   const authorization = base64('blah:bleh');
   const result = getToken(authorization);
 
-  expect(result).toEqual({ id: 'blah', email: 'bleh' });
+  expect(result).toEqual({ tenant: 'blah', user: 'bleh' });
 });

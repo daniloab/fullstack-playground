@@ -15,8 +15,8 @@ export const getToken = (authorization: Base64String): Token | null => {
   }
 
   return {
-    id: tokens[0],
-    email: tokens[1],
+    tenant: tokens[0],
+    user: tokens[1],
   };
 };
 

@@ -7,8 +7,9 @@ import cors from 'koa-cors';
 import { version } from '../package.json';
 
 import { OK } from './common/consts';
-import userSignUp from './api/user/v1/userSignUp';
-import userLogin from './api/user/v1/userLogin';
+import auth from './auth/auth';
+import authEmail from './api/auth/v1/login/authEmail';
+import authPassword from './api/auth/v1/login/authPassword';
 
 const app = new Koa();
 
@@ -30,15 +31,17 @@ routerOpen.get('/api/version', ctx => {
   };
 });
 
-routerOpen.post('/api/user/v1/signup', userSignUp);
-routerOpen.post('/api/user/v1/login', userLogin);
+// routerOpen.post('/api/user/v1/signup', userSignUp);
+// routerOpen.post('/api/user/v1/login', userLogin);
 
 app.use(routerOpen.routes());
 
 //Authorized APIs
 //Beyond this points APIS need to be Authenticated
 
-// routerAuth.post('/api/common/user/v1/update-or-create', userPost);
+routerAuth.use(auth);
+routerAuth.post('/api/auth/v1/login/email', authEmail);
+routerAuth.post('/api/auth/v1/login/password', authPassword);
 
 app.use(routerAuth.routes());
 
