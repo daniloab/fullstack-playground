@@ -1,6 +1,6 @@
 import { ITenant, TenantModel } from '@fullstack-playground/modules';
 
-import { DeepPartial } from '../../src/types';
+import { DeepPartial } from '@fullstack-playground/api/src/types';
 
 export const createTenant = async (args: DeepPartial<ITenant> = {}) => {
   const { name, domainName } = args;

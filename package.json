@@ -96,7 +96,9 @@
     "lint:staged": "lint-staged",
     "prettier": "prettier --write --single-quote true --trailing-comma all --print-width 120",
     "api": "yarn workspace @fullstack-playground/api start",
-    "build:modules": "yarn workspace @fullstack-playground/modules build"
+    "build:modules": "yarn workspace @fullstack-playground/modules build",
+    "build:types": "yarn workspace @fullstack-playground/types build",
+    "build:test": "yarn workspace @fullstack-playground/test build"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

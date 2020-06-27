@@ -1,7 +1,7 @@
-import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '../../../../../../test';
+import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fullstack-playground/test';
+import { createTenant, createUser } from '@fullstack-playground/modules';
 
-import { createApiCall } from '../../../../../../test/helper';
-import { createTenant, createUser } from '../../../../../../test/createResource';
+import { createApiCall } from '../../../../../../test';
 import { MESSAGE } from '../../../../ApiHelpers';
 
 beforeAll(connectMongoose);
