@@ -1,12 +1,13 @@
+import { UserModel } from '@fullstack-playground/modules';
+
 import { ERROR } from '../../../../common/consts';
-import { User } from '../../../../models';
 import { MESSAGE } from '../../../ApiHelpers';
 
 const authEmail = async ctx => {
   const { tenant } = ctx;
   const { email } = ctx.request.body;
 
-  const user = await User.findOne({
+  const user = await UserModel.findOne({
     email,
     tenant,
   });

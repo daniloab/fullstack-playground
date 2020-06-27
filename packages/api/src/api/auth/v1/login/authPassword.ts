@@ -1,5 +1,6 @@
+import { UserModel } from '@fullstack-playground/modules';
+
 import { ERROR } from '../../../../common/consts';
-import { User } from '../../../../models';
 import { generateToken } from '../../../../auth/auth';
 import { MESSAGE } from '../../../ApiHelpers';
 
@@ -27,7 +28,7 @@ const authPassword = async ctx => {
     return;
   }
 
-  const user = await User.findOne({
+  const user = await UserModel.findOne({
     email,
     tenant,
   });

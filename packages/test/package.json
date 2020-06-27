@@ -1,5 +1,5 @@
 {
-  "name": "@rest-api/test",
+  "name": "@fullstack-playground/test",
   "version": "1.0.0",
   "main": "src/index.tsx"
 }

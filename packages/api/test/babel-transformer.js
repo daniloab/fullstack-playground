@@ -1,4 +1,4 @@
-const config = require('@rest-api/babel');
+const config = require('@fullstack-playground/babel');
 
 const { createTransformer } = require('babel-jest');
 

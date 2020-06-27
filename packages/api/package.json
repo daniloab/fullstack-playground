@@ -1,7 +1,7 @@
 {
-  "name": "@rest-api/server",
+  "name": "@fullstack-playground/api",
   "version": "1.0.0",
-  "description": "server package",
+  "description": "api package",
   "main": "index.js",
   "author": "Danilo Assis",
   "license": "MIT",
@@ -19,7 +19,8 @@
     "mongoose": "^5.9.14"
   },
   "devDependencies": {
-    "@rest-api/babel": "*",
+    "@fullstack-playground/modules": "*",
+    "@fullstack-playground/babel": "*",
     "babel-loader": "^8.0.6",
     "reload-server-webpack-plugin": "^1.0.1",
     "webpack": "4.39.1",
@@ -28,6 +29,6 @@
     "webpack-plugin-serve": "0.12.0"
   },
   "scripts": {
-    "start": "webpack --watch --progress --config webpack.config.server.js"
+    "start": "webpack --watch --progress --config webpack.config.api.js"
   }
 }
