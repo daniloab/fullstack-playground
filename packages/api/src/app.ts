@@ -10,6 +10,7 @@ import { OK } from './common/consts';
 import auth from './auth/auth';
 import authEmail from './api/auth/v1/login/authEmail';
 import authPassword from './api/auth/v1/login/authPassword';
+import userGetAll from './api/user/v1/userGetAll';
 
 const app = new Koa();
 
@@ -40,8 +41,13 @@ app.use(routerOpen.routes());
 //Beyond this points APIS need to be Authenticated
 
 routerAuth.use(auth);
+
+// auth
 routerAuth.post('/api/auth/v1/login/email', authEmail);
 routerAuth.post('/api/auth/v1/login/password', authPassword);
+
+// user
+routerAuth.get('/api/user/v1/users', userGetAll);
 
 app.use(routerAuth.routes());
 

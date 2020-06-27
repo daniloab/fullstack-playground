@@ -9,6 +9,7 @@ import { getUser } from './sessionManagement';
 
 export type AuthContext = {
   user: IUser;
+  tenant: ITenant;
 };
 
 const auth = async (ctx, next) => {
