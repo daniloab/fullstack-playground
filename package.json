@@ -1,5 +1,5 @@
 {
-  "name": "rest-api",
+  "name": "fullstack-playground",
   "version": "1.0.0",
   "description": "rest api with koa js",
   "main": "index.js",
@@ -95,7 +95,8 @@
     "jest": "jest",
     "lint:staged": "lint-staged",
     "prettier": "prettier --write --single-quote true --trailing-comma all --print-width 120",
-    "server": "yarn workspace @rest-api/server start"
+    "api": "yarn workspace @fullstack-playground/api start",
+    "build:modules": "yarn workspace @fullstack-playground/modules build"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
