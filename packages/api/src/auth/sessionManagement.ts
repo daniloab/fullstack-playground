@@ -1,6 +1,4 @@
-import { UserModel } from '@fullstack-playground/modules';
-
-import { Tenant } from '../models';
+import { TenantModel, UserModel } from '@fullstack-playground/modules';
 
 import { ERROR } from '../common/consts';
 
@@ -10,7 +8,7 @@ import getToken from './getToken';
 
 export const getUser = async (token?: string, domainname?: string) => {
   const tenant = domainname
-    ? await Tenant.findOne({
+    ? await TenantModel.findOne({
         domainName: domainname,
       })
     : null;
