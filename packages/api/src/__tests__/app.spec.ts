@@ -1,5 +1,6 @@
-import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '../../test';
-import { createGetApiCall } from '../../test/helper';
+import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fullstack-playground/test';
+
+import { createGetApiCall } from '../../test';
 
 beforeAll(connectMongoose);
 

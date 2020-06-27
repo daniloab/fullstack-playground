@@ -1,6 +1,6 @@
 import request from 'supertest';
 
-import app from '../src/app';
+import app from '@fullstack-playground/api/src/app';
 
 export const createApiCall = async (args = {}) => {
   const { url, authorization, payload: body, domainname = '' } = args;

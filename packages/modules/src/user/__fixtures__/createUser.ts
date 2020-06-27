@@ -1,9 +1,9 @@
-import { IUser, UserModel, TenantModel } from '@fullstack-playground/modules';
+import { getOrCreate } from '@fullstack-playground/test';
+import { DeepPartial } from '@fullstack-playground/types';
 
-import { DeepPartial } from '../../src/types';
-
-import { getOrCreate } from './helpers';
-import { createTenant } from './createTenant';
+import UserModel, { IUser } from '../UserModel';
+import TenantModel from '../../tenant/TenantModel';
+import { createTenant } from '../../tenant/__fixtures__/createTenant';
 
 type CreateUserArgs = DeepPartial<IUser>;
 export const createUser = async (args: CreateUserArgs = {}): Promise<IUser> => {

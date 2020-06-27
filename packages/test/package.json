@@ -1,5 +1,16 @@
 {
   "name": "@fullstack-playground/test",
   "version": "1.0.0",
-  "main": "src/index.tsx"
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "devDependencies": {
+    "@fullstack-playground/babel": "*",
+    "@fullstack-playground/types": "*"
+  },
+  "scripts": {
+    "build": "babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" --ignore *.spec.js --out-dir dist --copy-files --source-maps --verbose"
+  },
+  "dependencies": {
+    "mongoose": "^5.9.20"
+  }
 }
