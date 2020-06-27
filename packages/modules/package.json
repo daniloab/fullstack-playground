@@ -1,0 +1,19 @@
+{
+  "name": "@fullstack-playground/modules",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Danilo Assis",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "devDependencies": {
+    "@fullstack-playground/babel": "*",
+    "@types/babel__core": "7.1.3"
+  },
+  "scripts": {
+    "build": "babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" --ignore *.spec.js --out-dir dist --copy-files --source-maps --verbose"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3"
+  }
+}

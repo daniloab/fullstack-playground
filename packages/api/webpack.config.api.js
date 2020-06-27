@@ -34,7 +34,7 @@ module.exports = {
     }),
     WebpackNodeExternals({
       modulesDir: path.resolve(__dirname, '../../node_modules'),
-      whitelist: [/@rest-api/],
+      whitelist: [/@fullstack-playground/],
     }),
   ],
   resolve: {

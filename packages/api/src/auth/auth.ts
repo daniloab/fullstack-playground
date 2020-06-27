@@ -1,8 +1,10 @@
 import jwt from 'jsonwebtoken';
 
+import { IUser } from '@fullstack-playground/modules';
+
 import { ERROR } from '../common/consts';
 
-import { ITenant, IUser } from '../models';
+import { ITenant } from '../models';
 import { config } from '../config';
 
 import { getUser } from './sessionManagement';
