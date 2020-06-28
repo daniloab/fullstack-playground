@@ -1,27 +1,12 @@
 import { UserModel } from '@fullstack-playground/modules';
 
-import { Types } from 'mongoose';
-
 import { AuthContext } from '../../../auth/auth';
 import { ERROR, OK } from '../../../common/consts';
-import { MESSAGE } from '../../ApiHelpers';
+import { checkObjectId, MESSAGE } from '../../ApiHelpers';
 
 export const userSelection = {
   _id: 1,
   name: 1,
-};
-
-export const conditionId = id => {
-  if (!Types.ObjectId.isValid(id)) {
-    return {
-      error: true,
-    };
-  }
-
-  return {
-    error: false,
-    _id: id,
-  };
 };
 
 export const getUserApi = async (conditions: object) => {
@@ -37,7 +22,7 @@ const userGet = async (ctx: AuthContext) => {
   const { id } = ctx.params;
 
   try {
-    const { error, ...validatedId } = conditionId(id);
+    const { error, ...validatedId } = checkObjectId(id);
     if (error) {
       ctx.status = 400;
       ctx.body = {
