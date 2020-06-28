@@ -22,7 +22,7 @@ export const createUser = async (args: CreateUserArgs = {}): Promise<IUser> => {
   }
 
   return new UserModel({
-    name: `Normal user ${n}`,
+    name: args.name || `Normal user ${n}`,
     password: '123456',
     email,
     tenant,
