@@ -1,6 +1,6 @@
 import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fullstack-playground/test';
 
-import { createGetApiOpenCall } from '../../test';
+import { createGetApiCall } from '../../test';
 
 beforeAll(connectMongoose);
 
@@ -11,9 +11,7 @@ afterAll(disconnectMongoose);
 const url = '/api/version';
 
 it('should get api version correctly', async () => {
-  const payload = {};
-
-  const response = await createGetApiOpenCall({ url, payload });
+  const response = await createGetApiCall({ url });
 
   expect(response.body).toMatchSnapshot();
   expect(response.status).toBe(200);
