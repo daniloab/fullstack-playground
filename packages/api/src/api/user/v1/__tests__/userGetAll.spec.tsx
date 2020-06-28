@@ -168,3 +168,21 @@ it('should not accept skip and limit negative', async () => {
   expect(response.body.errors[0].message).toBe(MESSAGE.PAGE_INFO.ERRORS.NEGATIVE);
   // expect(sanitizeTestObject(response.body)).toMatchSnapshot();
 });
+
+it('should not return user from another tenant', async () => {
+  const anotherTenant = await createTenant();
+  await createUser({ tenant: anotherTenant });
+
+  const tenant = await createTenant();
+  const user = await createUser({ tenant });
+
+  const authorization = base64(`${tenant._id}:${user._id}`);
+
+  const response = await createGetApiCall({ url, authorization, domainname: tenant.domainName });
+
+  expect(response.status).toBe(200);
+  expect(response.body.users.length).toBe(1);
+
+  // eslint-disable-next-line
+  // expect(response.body).toMatchSnapshot();
+});

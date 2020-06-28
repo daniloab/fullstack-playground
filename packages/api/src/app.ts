@@ -11,6 +11,7 @@ import auth from './auth/auth';
 import authEmail from './api/auth/v1/login/authEmail';
 import authPassword from './api/auth/v1/login/authPassword';
 import userGetAll from './api/user/v1/userGetAll';
+import userGet from './api/user/v1/userGet';
 
 const app = new Koa();
 
@@ -48,6 +49,7 @@ routerAuth.post('/api/auth/v1/login/password', authPassword);
 
 // user
 routerAuth.get('/api/user/v1/users', userGetAll);
+routerAuth.get('/api/user/v1/users/:id', userGet);
 
 app.use(routerAuth.routes());
 
