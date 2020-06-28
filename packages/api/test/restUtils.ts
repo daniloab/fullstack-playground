@@ -29,21 +29,6 @@ export const createApiCall = async (args: ApiArgs) => {
   return response;
 };
 
-export const createGetApiOpenCall = async (args: ApiArgs) => {
-  const { url } = args;
-
-  const response = await request(app.callback())
-    .get(url)
-    .set({
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-      domainname: '',
-    })
-    .send();
-
-  return response;
-};
-
 export const createGetApiCall = async (args: ApiArgs) => {
   const { url, authorization, domainname = '' } = args;
 

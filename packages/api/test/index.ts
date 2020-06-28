@@ -1,1 +1,1 @@
-export { createApiCall, createDeleteApiCall, createGetApiCall, createGetApiOpenCall } from './restUtils';
+export { createApiCall, createDeleteApiCall, createGetApiCall } from './restUtils';
