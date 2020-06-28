@@ -43,6 +43,7 @@ it('should return error if user not found', async () => {
   };
 
   const response = await createApiCall({ url, payload, domainname: tenant.domainName });
+
   expect(response.body).toMatchSnapshot();
   expect(response.body.message).toBe(MESSAGE.LOGIN.INCORRECT);
   expect(response.status).toBe(400);

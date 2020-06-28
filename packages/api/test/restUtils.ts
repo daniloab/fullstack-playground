@@ -1,8 +1,15 @@
 import request from 'supertest';
 
-import app from '@fullstack-playground/api/src/app';
+import app from '../src/app';
 
-export const createApiCall = async (args = {}) => {
+type ApiArgs = {
+  url: string | null;
+  authorization: string | null;
+  payload: {} | null;
+  domainname: string | null;
+};
+
+export const createApiCall = async (args: ApiArgs) => {
   const { url, authorization, payload: body, domainname = '' } = args;
 
   const payload = {
@@ -22,7 +29,22 @@ export const createApiCall = async (args = {}) => {
   return response;
 };
 
-export const createGetApiCall = async (args = {}) => {
+export const createGetApiOpenCall = async (args: ApiArgs) => {
+  const { url } = args;
+
+  const response = await request(app.callback())
+    .get(url)
+    .set({
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      domainname: '',
+    })
+    .send();
+
+  return response;
+};
+
+export const createGetApiCall = async (args: ApiArgs) => {
   const { url, authorization, domainname = '' } = args;
 
   const response = await request(app.callback())
@@ -38,7 +60,7 @@ export const createGetApiCall = async (args = {}) => {
   return response;
 };
 
-export const createDeleteApiCall = async (args = {}) => {
+export const createDeleteApiCall = async (args: ApiArgs) => {
   const { url, authorization, domainname = '' } = args;
 
   const response = await request(app.callback())

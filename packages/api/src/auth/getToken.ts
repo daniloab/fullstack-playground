@@ -1,8 +1,8 @@
 import { Base64String, unbase64 } from './base64';
 
 export type Token = {
-  clientId: string;
-  clientSecret: string;
+  tenant: string;
+  user: string;
 };
 
 export const getToken = (authorization: Base64String): Token | null => {

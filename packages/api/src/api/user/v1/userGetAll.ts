@@ -4,10 +4,7 @@ import { getPageInfo, getSkipAndLimit } from '../../ApiHelpers';
 import { AuthContext } from '../../../auth/auth';
 import { ERROR, OK } from '../../../common/consts';
 
-const userSelection = {
-  _id: 1,
-  name: 1,
-};
+import { userSelection } from './userGet';
 
 const userGetAll = async (ctx: AuthContext) => {
   const { tenant } = ctx;

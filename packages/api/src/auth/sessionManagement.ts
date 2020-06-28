@@ -6,10 +6,10 @@ import { MESSAGE } from '../api/ApiHelpers';
 
 import getToken from './getToken';
 
-export const getUser = async (token?: string, domainname?: string) => {
-  const tenant = domainname
+export const getUser = async (token?: string, domainName?: string) => {
+  const tenant = domainName
     ? await TenantModel.findOne({
-        domainName: domainname,
+        domainName: domainName,
       })
     : null;
 
