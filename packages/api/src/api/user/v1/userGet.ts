@@ -1,5 +1,7 @@
 import { UserModel } from '@fullstack-playground/modules';
 
+import { Types } from 'mongoose';
+
 import { AuthContext } from '../../../auth/auth';
 import { ERROR, OK } from '../../../common/consts';
 import { MESSAGE } from '../../ApiHelpers';
@@ -7,6 +9,19 @@ import { MESSAGE } from '../../ApiHelpers';
 export const userSelection = {
   _id: 1,
   name: 1,
+};
+
+export const conditionId = id => {
+  if (!Types.ObjectId.isValid(id)) {
+    return {
+      error: true,
+    };
+  }
+
+  return {
+    error: false,
+    _id: id,
+  };
 };
 
 export const getUserApi = async (conditions: object) => {
@@ -21,13 +36,24 @@ const userGet = async (ctx: AuthContext) => {
   const { tenant } = ctx;
   const { id } = ctx.params;
 
-  const conditions = {
-    _id: id,
-    tenant: tenant._id,
-    removedAt: null,
-  };
-
   try {
+    const { error, ...validatedId } = conditionId(id);
+    if (error) {
+      ctx.status = 400;
+      ctx.body = {
+        status: ERROR,
+        message: MESSAGE.USER.NOT_FOUND,
+        user: null,
+      };
+      return;
+    }
+
+    const conditions = {
+      ...validatedId,
+      tenant,
+      removedAt: null,
+    };
+
     const user = await getUserApi(conditions);
 
     if (!user) {

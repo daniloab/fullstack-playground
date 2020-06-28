@@ -12,7 +12,7 @@ const userGetAll = async (ctx: AuthContext) => {
   const { skip, limit } = getSkipAndLimit(ctx);
 
   const conditions = {
-    company: tenant._id,
+    tenant,
     removedAt: null,
   };
 
