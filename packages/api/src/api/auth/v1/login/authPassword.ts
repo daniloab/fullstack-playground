@@ -9,7 +9,7 @@ const authPassword = async ctx => {
   const { email, password, tenantId } = ctx.request.body;
 
   if (tenant._id.toString().trim() !== tenantId.toString().trim()) {
-    ctx.status = 400;
+    ctx.status = 401;
     ctx.body = {
       status: ERROR,
       message: MESSAGE.LOGIN.INVALID_TENANT,
@@ -19,7 +19,7 @@ const authPassword = async ctx => {
   }
 
   if (!email || !password || !tenantId) {
-    ctx.status = 400;
+    ctx.status = 401;
     ctx.body = {
       status: ERROR,
       message: MESSAGE.LOGIN.INVALID_LOGIN,
@@ -34,7 +34,7 @@ const authPassword = async ctx => {
   });
 
   if (!user) {
-    ctx.status = 400;
+    ctx.status = 401;
     ctx.body = {
       status: ERROR,
       message: MESSAGE.LOGIN.INCORRECT,
@@ -47,7 +47,7 @@ const authPassword = async ctx => {
   try {
     correctPassword = await user.authenticate(password);
   } catch (err) {
-    ctx.status = 400;
+    ctx.status = 401;
     ctx.body = {
       status: ERROR,
       message: MESSAGE.LOGIN.INCORRECT,
@@ -57,7 +57,7 @@ const authPassword = async ctx => {
   }
 
   if (!correctPassword) {
-    ctx.status = 400;
+    ctx.status = 401;
     ctx.body = {
       status: ERROR,
       message: MESSAGE.LOGIN.INCORRECT,

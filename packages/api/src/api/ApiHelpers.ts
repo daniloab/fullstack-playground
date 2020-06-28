@@ -1,9 +1,12 @@
-import { Model } from 'mongoose';
+import { Model, Types } from 'mongoose';
 import { Context } from 'koa';
 
 export const MESSAGE = {
   AUTH: {
     UNAUTHORIZED: 'Unauthorized',
+  },
+  COMMON: {
+    INVALID_ID: 'Invalid id',
   },
   LOGIN: {
     EMAIL_SUCCESS: 'Email successful',
@@ -91,5 +94,18 @@ export const getPageInfo = async (ctx: Context, model: Model): PageInfo => {
     totalCount,
     hasPreviousPage,
     hasNextPage,
+  };
+};
+
+export const checkObjectId = id => {
+  if (!Types.ObjectId.isValid(id)) {
+    return {
+      error: true,
+    };
+  }
+
+  return {
+    error: false,
+    _id: id,
   };
 };

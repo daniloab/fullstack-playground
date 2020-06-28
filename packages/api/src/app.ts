@@ -12,7 +12,8 @@ import authEmail from './api/auth/v1/login/authEmail';
 import authPassword from './api/auth/v1/login/authPassword';
 import userGetAll from './api/user/v1/userGetAll';
 import userGet from './api/user/v1/userGet';
-
+import { getSwaggerSpec } from './swaggerSpec';
+import userDelete from './api/user/v1/userDelete';
 const app = new Koa();
 
 const routerAuth = new Router();
@@ -22,9 +23,12 @@ app.use(logger());
 app.use(cors({ maxAge: 86400 }));
 app.use(bodyParser());
 
+routerOpen.get('/swagger.json', ctx => {
+  const swaggerSpec = getSwaggerSpec();
+  ctx.body = swaggerSpec;
+});
+
 //Open APIS (APIs that dont need to Authenticate)
-// routerOpen.get('status', status.GET);
-// routerOpen.get('/api/status', status.GET);
 routerOpen.get('/api/version', ctx => {
   ctx.status = 200;
   ctx.body = {
@@ -50,6 +54,7 @@ routerAuth.post('/api/auth/v1/login/password', authPassword);
 // user
 routerAuth.get('/api/user/v1/users', userGetAll);
 routerAuth.get('/api/user/v1/users/:id', userGet);
+routerAuth.delete('/api/user/v1/users/:id', userDelete);
 
 app.use(routerAuth.routes());
 

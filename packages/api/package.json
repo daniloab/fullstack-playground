@@ -16,11 +16,12 @@
     "koa-logger": "^3.2.1",
     "koa-multer": "^1.0.2",
     "koa-router": "^8.0.8",
-    "mongoose": "^5.9.14"
+    "mongoose": "^5.9.14",
+    "swagger-jsdoc": "^4.0.0"
   },
   "devDependencies": {
-    "@fullstack-playground/modules": "*",
     "@fullstack-playground/babel": "*",
+    "@fullstack-playground/modules": "*",
     "babel-loader": "^8.0.6",
     "reload-server-webpack-plugin": "^1.0.1",
     "webpack": "4.39.1",

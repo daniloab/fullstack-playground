@@ -28,7 +28,7 @@ it('should return error if tenant id is different of tenant already checked by a
 
   expect(response.body).toMatchSnapshot();
   expect(response.body.message).toBe(MESSAGE.LOGIN.INVALID_TENANT);
-  expect(response.status).toBe(400);
+  expect(response.status).toBe(401);
 });
 
 it('should return error if any payload field is missing (email)', async () => {
@@ -46,7 +46,7 @@ it('should return error if any payload field is missing (email)', async () => {
 
   expect(response.body).toMatchSnapshot();
   expect(response.body.message).toBe(MESSAGE.LOGIN.INVALID_LOGIN);
-  expect(response.status).toBe(400);
+  expect(response.status).toBe(401);
 });
 
 it('should return error if user dont exist', async () => {
@@ -65,7 +65,7 @@ it('should return error if user dont exist', async () => {
 
   expect(response.body).toMatchSnapshot();
   expect(response.body.message).toBe(MESSAGE.LOGIN.INCORRECT);
-  expect(response.status).toBe(400);
+  expect(response.status).toBe(401);
 });
 
 it('should return error if user password is wrong', async () => {
@@ -86,7 +86,7 @@ it('should return error if user password is wrong', async () => {
 
   expect(response.body).toMatchSnapshot();
   expect(response.body.message).toBe(MESSAGE.LOGIN.INCORRECT);
-  expect(response.status).toBe(400);
+  expect(response.status).toBe(401);
 });
 
 // @todo fix check password
