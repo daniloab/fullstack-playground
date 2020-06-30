@@ -23,6 +23,7 @@ const userGet = async (ctx: AuthContext) => {
 
   try {
     const { error, ...validatedId } = checkObjectId(id);
+
     if (error) {
       ctx.status = 400;
       ctx.body = {

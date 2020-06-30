@@ -14,6 +14,7 @@ import userGetAll from './api/user/v1/userGetAll';
 import userGet from './api/user/v1/userGet';
 import { getSwaggerSpec } from './swaggerSpec';
 import userDelete from './api/user/v1/userDelete';
+import { userPost } from './api/user/v1/userPost';
 const app = new Koa();
 
 const routerAuth = new Router();
@@ -37,14 +38,10 @@ routerOpen.get('/api/version', ctx => {
   };
 });
 
-// routerOpen.post('/api/user/v1/signup', userSignUp);
-// routerOpen.post('/api/user/v1/login', userLogin);
-
 app.use(routerOpen.routes());
 
 //Authorized APIs
 //Beyond this points APIS need to be Authenticated
-
 routerAuth.use(auth);
 
 // auth
@@ -55,6 +52,7 @@ routerAuth.post('/api/auth/v1/login/password', authPassword);
 routerAuth.get('/api/user/v1/users', userGetAll);
 routerAuth.get('/api/user/v1/users/:id', userGet);
 routerAuth.delete('/api/user/v1/users/:id', userDelete);
+routerAuth.post('/api/user/v1/users', userPost);
 
 app.use(routerAuth.routes());
 
