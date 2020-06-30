@@ -7,6 +7,9 @@ export const MESSAGE = {
   },
   COMMON: {
     INVALID_ID: 'Invalid id',
+    EMAIL: 'email is a required field',
+    EMAIL_INVALID: 'email must be a valid email',
+    YUP_VALIDATION: 'Unknown error processing object',
   },
   LOGIN: {
     EMAIL_SUCCESS: 'Email successful',
@@ -24,7 +27,12 @@ export const MESSAGE = {
     NOT_FOUND: 'Tenant not found',
   },
   USER: {
+    CREATING: 'Some error occurred while creating user',
+    MISSING: 'Missing user',
     NOT_FOUND: 'User not found',
+    PASSWORD: 'You must informa a password',
+    PRIMARY_KEY: 'User should have one of primary keys: id, or email',
+    UPDATING: 'Some error occurred while updating user',
   },
 };
 

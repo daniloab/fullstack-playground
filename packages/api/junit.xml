@@ -1,0 +1,32 @@
+<testsuites name="jest tests" tests="6" failures="2" time="3.991">
+  <testsuite name="undefined" errors="0" failures="2" skipped="4" timestamp="2020-06-30T01:37:37" time="3.631" tests="6">
+    <testcase classname=" should return error if user was not passed" name=" should return error if user was not passed" time="0.001">
+      <skipped/>
+    </testcase>
+    <testcase classname=" should return error if email was not passed" name=" should return error if email was not passed" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname=" should return error if email is not valid" name=" should return error if email is not valid" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname=" should return error if id passed is not object idvalid" name=" should return error if id passed is not object idvalid" time="0.153">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: &quot;Unknown error processing object&quot;
+Received: &quot;Invalid id&quot;
+    at Object.&lt;anonymous&gt; (/Users/entria/Documents/projects/fullstack-playground/packages/api/src/api/user/v1/__tests__/userPost.spec.ts:80:33)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</failure>
+    </testcase>
+    <testcase classname=" should return error if id passed not found" name=" should return error if id passed not found" time="0.043">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: &quot;User not found&quot;
+Received: &quot;Invalid id&quot;
+    at Object.&lt;anonymous&gt; (/Users/entria/Documents/projects/fullstack-playground/packages/api/src/api/user/v1/__tests__/userPost.spec.ts:99:33)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</failure>
+    </testcase>
+    <testcase classname=" should return ok for user payload with email" name=" should return ok for user payload with email" time="0">
+      <skipped/>
+    </testcase>
+  </testsuite>
+</testsuites>
