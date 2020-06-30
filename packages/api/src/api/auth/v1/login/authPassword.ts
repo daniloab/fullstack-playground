@@ -45,7 +45,7 @@ const authPassword = async ctx => {
 
   let correctPassword = null;
   try {
-    correctPassword = await user.authenticate(password);
+    correctPassword = user.authenticate(password);
   } catch (err) {
     ctx.status = 401;
     ctx.body = {

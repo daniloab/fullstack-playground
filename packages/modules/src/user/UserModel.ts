@@ -26,6 +26,13 @@ const UserSchema = new mongoose.Schema(
       index: true,
       es_indexed: true,
     },
+    removedAt: {
+      type: Date,
+      index: true,
+      default: null,
+
+      es_indexed: true,
+    },
   },
   {
     timestamps: {
@@ -41,6 +48,7 @@ export interface IUser extends Document {
   email: string;
   password: string;
   tenant: Types.ObjectId;
+  removedAt: Date;
   authenticate: (plainTextPassword: string) => boolean;
   encryptPassword: (password: string | undefined) => string;
   createdAt: Date;

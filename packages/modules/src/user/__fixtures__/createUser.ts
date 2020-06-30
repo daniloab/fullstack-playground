@@ -7,7 +7,8 @@ import { createTenant } from '../../tenant/__fixtures__/createTenant';
 
 type CreateUserArgs = DeepPartial<IUser>;
 export const createUser = async (args: CreateUserArgs = {}): Promise<IUser> => {
-  let { email, tenant } = args;
+  // eslint-disable-next-line
+  let { email, tenant, password, ...restArgs } = args;
 
   // TODO - migrate to getCounter
   // const n = getCounter('user');
@@ -23,8 +24,9 @@ export const createUser = async (args: CreateUserArgs = {}): Promise<IUser> => {
 
   return new UserModel({
     name: args.name || `Normal user ${n}`,
-    password: '123456',
+    password: password || '123456',
     email,
     tenant,
+    ...restArgs,
   }).save();
 };
