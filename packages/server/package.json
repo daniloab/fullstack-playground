@@ -1,0 +1,41 @@
+{
+  "name": "@fullstack-playground/server",
+  "version": "1.0.0",
+  "description": "server package",
+  "main": "index.js",
+  "author": "Danilo Assis",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "dotenv-safe": "^8.2.0",
+    "graphql-playground-middleware": "^1.1.2",
+    "graphql-relay": "^0.6.0",
+    "isomorphic-fetch": "^2.2.1",
+    "koa": "^2.12.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-convert": "^2.0.0",
+    "koa-cors": "^0.0.16",
+    "koa-graphql": "^0.8.0",
+    "koa-logger": "^3.2.1",
+    "koa-multer": "^1.0.2",
+    "koa-router": "^8.0.8",
+    "mongoose": "^5.9.14",
+    "swagger-jsdoc": "^4.0.0",
+    "yup": "^0.29.1"
+  },
+  "devDependencies": {
+    "@fullstack-playground/babel": "*",
+    "@fullstack-playground/modules": "*",
+    "@fullstack-playground/shared": "*",
+    "babel-loader": "^8.0.6",
+    "reload-server-webpack-plugin": "^1.0.1",
+    "webpack": "4.39.1",
+    "webpack-cli": "3.3.6",
+    "webpack-node-externals": "1.7.2",
+    "webpack-plugin-serve": "0.12.0"
+  },
+  "scripts": {
+    "start": "webpack --watch --progress --config webpack.config.server.js"
+  }
+}

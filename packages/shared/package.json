@@ -1,0 +1,16 @@
+{
+  "name": "@fullstack-playground/shared",
+  "version": "1.0.0",
+  "dependencies": {
+    "dotenv-safe": "^6.1.0",
+    "graphql": "15.0.0",
+    "mongoose": "5.9.17",
+    "pretty-format": "26.0.1"
+  },
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "scripts": {
+    "build": "rm -rf dist/* && babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" --ignore *.spec.js --out-dir dist --copy-files --source-maps --verbose"
+  },
+  "sideEffects": false
+}

@@ -1,0 +1,6 @@
+<testsuites name="jest tests" tests="1" failures="0" time="4.944">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-09-25T01:40:12" time="4.362" tests="1">
+    <testcase classname=" should return version" name=" should return version" time="0.064">
+    </testcase>
+  </testsuite>
+</testsuites>
