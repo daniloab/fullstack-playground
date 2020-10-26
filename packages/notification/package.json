@@ -1,0 +1,19 @@
+{
+  "name": "@fullstack-playground/notification",
+  "version": "1.0.0",
+  "description": "notification package",
+  "main": "index.js",
+  "author": "Danilo Assis",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7"
+  },
+  "devDependencies": {
+    "@fullstack-playground/babel": "*",
+    "@fullstack-playground/modules": "*"
+  },
+  "scripts": {
+    "start": "webpack --watch --progress --config webpack.config.api.js"
+  }
+}
