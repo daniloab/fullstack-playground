@@ -1,4 +1,6 @@
 import SES, { PromiseResult } from 'aws-sdk/clients/ses';
+
+// eslint-disable-next-line
 import AWS from 'aws-sdk';
 import HTMLToText from 'html-to-text';
 
@@ -41,12 +43,13 @@ export const sendEmail = async (payload: sendEmailPayload): Promise<PromiseResul
     ReturnPath: email,
   };
 
+  // eslint-disable-next-line
   // set region if not set (as not set by the SDK by default)
-  if (!AWS.config.region) {
-    AWS.config.update({
-      region: 'eu-west-1',
-    });
-  }
+  // if (!AWS.config.region) {
+  //   AWS.config.update({
+  //     region: 'eu-west-1',
+  //   });
+  // }
 
   try {
     return await ses.sendEmail(params).promise();
