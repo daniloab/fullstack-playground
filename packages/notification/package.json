@@ -7,7 +7,9 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@babel/polyfill": "^7.8.7"
+    "@babel/polyfill": "^7.8.7",
+    "aws-sdk": "^2.776.0",
+    "html-to-text": "^5.1.1"
   },
   "devDependencies": {
     "@fullstack-playground/babel": "*",
