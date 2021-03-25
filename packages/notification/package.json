@@ -9,7 +9,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
     "aws-sdk": "^2.776.0",
-    "html-to-text": "^5.1.1"
+    "html-to-text": "^7.0.0"
   },
   "devDependencies": {
     "@fullstack-playground/babel": "*",
