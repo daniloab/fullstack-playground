@@ -1,5 +1,5 @@
 import Koa, { Request, Response } from 'koa';
-import { config } from '@fullstack-playground/shared';
+
 import convert from 'koa-convert';
 
 import bodyParser from 'koa-bodyparser';
@@ -7,6 +7,8 @@ import koaLogger from 'koa-logger';
 import { koaPlayground } from 'graphql-playground-middleware';
 import Router from 'koa-router';
 import graphqlHttp from 'koa-graphql';
+
+import { config } from '../config';
 
 import { schema } from './schema/schema';
 
