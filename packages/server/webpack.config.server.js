@@ -30,11 +30,11 @@ module.exports = {
   },
   externals: [
     WebpackNodeExternals({
-      whitelist: ['webpack/hot/poll?1000'],
+      allowlist: ['webpack/hot/poll?1000'],
     }),
     WebpackNodeExternals({
       modulesDir: path.resolve(__dirname, '../../node_modules'),
-      whitelist: [/@fullstack-playground/],
+      allowlist: [/@fullstack-playground/],
     }),
   ],
   resolve: {
