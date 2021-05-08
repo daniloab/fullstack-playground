@@ -1,12 +1,15 @@
 import '@babel/polyfill';
 import { createServer } from 'http';
 
-import { connectDatabase, config } from '@fullstack-playground/shared';
+import { connectDatabase } from '@fullstack-playground/shared';
+
+import { config } from '../config';
 
 import app from './app';
 
 const runServer = async () => {
   try {
+    // eslint-disable-next-line
     console.log('connecting to database...');
     await connectDatabase();
   } catch (error) {
