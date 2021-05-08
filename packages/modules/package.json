@@ -1,5 +1,5 @@
 {
-  "name": "@fullstack-playground/modules",
+  "name": "@fp/modules",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Danilo Assis",
@@ -7,7 +7,7 @@
   "main": "dist/index.js",
   "module": "src/index.ts",
   "devDependencies": {
-    "@fullstack-playground/babel": "*",
+    "@fp/babel": "*",
     "@types/babel__core": "7.1.14"
   },
   "scripts": {

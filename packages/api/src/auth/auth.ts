@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 
-import { IUser, ITenant } from '@fullstack-playground/modules';
+import { IUser, ITenant } from '@fp/modules';
 
 import { ERROR } from '../common/consts';
 import { config } from '../config';

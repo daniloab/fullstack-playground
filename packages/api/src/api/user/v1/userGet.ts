@@ -1,4 +1,4 @@
-import { UserModel } from '@fullstack-playground/modules';
+import { UserModel } from '@fp/modules';
 
 import { AuthContext } from '../../../auth/auth';
 import { ERROR, OK } from '../../../common/consts';

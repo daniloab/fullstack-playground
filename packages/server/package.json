@@ -1,5 +1,5 @@
 {
-  "name": "@fullstack-playground/server",
+  "name": "@fp/server",
   "version": "1.0.0",
   "description": "server package",
   "main": "index.js",
@@ -25,9 +25,9 @@
     "yup": "^0.29.1"
   },
   "devDependencies": {
-    "@fullstack-playground/babel": "*",
-    "@fullstack-playground/modules": "*",
-    "@fullstack-playground/shared": "*",
+    "@fp/babel": "*",
+    "@fp/modules": "*",
+    "@fp/shared": "*",
     "babel-loader": "^8.0.6",
     "reload-server-webpack-plugin": "^1.0.1",
     "webpack": "4.39.1",
