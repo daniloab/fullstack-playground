@@ -49,7 +49,7 @@
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-okonet": "7.0.2",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-config-shellscape": "2.0.2",
+    "eslint-config-shellscape": "3.0.0",
     "eslint-import-resolver-lerna": "^1.1.0",
     "eslint-import-resolver-typescript": "1.1.1",
     "eslint-import-resolver-webpack": "0.11.1",
