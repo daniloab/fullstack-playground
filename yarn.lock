@@ -2551,10 +2551,10 @@
   resolved "https://registry.yarnpkg.com/@types/dedent/-/dedent-0.7.0.tgz#155f339ca404e6dd90b9ce46a3f78fd69ca9b050"
   integrity sha512-EGlKlgMhnLt/cM4DbUSafFdrkeJoC9Mvnj0PUCU7tFmTjMjNRT957kXCx0wYm3JuEq4o4ZsS5vG+NlkM2DMd2A==
 
-"@types/dotenv-safe@^5.0.0":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@types/dotenv-safe/-/dotenv-safe-5.0.4.tgz#44b44b29d73fb5f16c4b7ab8ef66526627a1d085"
-  integrity sha512-FPwutMRGFHRA8GmQgVRu9T+VOhPgXcHJAcgeazTRmJ6UfCFFBCScoxGPQe28D+JadsVXxOOdHxBgSlo1YfE5zA==
+"@types/dotenv-safe@^8.1.1":
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/@types/dotenv-safe/-/dotenv-safe-8.1.1.tgz#2d7248ed4ad969c41d85586266ad64e9a3603ad4"
+  integrity sha512-JOJuWwYaRinKl3UdmTivWgXO66dKpGW67NaYRMSMjKsNjF+MTsnc/T656I8eNGokIHVLihkY1kx96Ho3l8vfqQ==
   dependencies:
     dotenv "^8.2.0"
 
