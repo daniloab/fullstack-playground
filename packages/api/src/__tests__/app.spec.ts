@@ -1,4 +1,4 @@
-import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fullstack-playground/test';
+import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fp/test';
 
 import { createGetApiCall } from '../../test';
 

@@ -1,4 +1,4 @@
-import { TenantModel, UserModel } from '@fullstack-playground/modules';
+import { TenantModel, UserModel } from '@fp/modules';
 
 import { ERROR } from '../common/consts';
 

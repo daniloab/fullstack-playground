@@ -1,5 +1,5 @@
-import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fullstack-playground/test';
-import { createTenant, createUser } from '@fullstack-playground/modules';
+import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fp/test';
+import { createTenant, createUser } from '@fp/modules';
 
 import { createApiCall } from '../../../../../../test';
 import { MESSAGE } from '../../../../ApiHelpers';
@@ -42,7 +42,11 @@ it('should return error if user not found', async () => {
     email: 'test@test.com',
   };
 
-  const response = await createApiCall({ url, payload, domainname: tenant.domainName });
+  const response = await createApiCall({
+    url,
+    payload,
+    domainname: tenant.domainName,
+  });
 
   expect(response.body).toMatchSnapshot();
   expect(response.body.message).toBe(MESSAGE.LOGIN.INCORRECT);
@@ -57,7 +61,11 @@ it('should return success if user found', async () => {
     email: user.email,
   };
 
-  const response = await createApiCall({ url, payload, domainname: tenant.domainName });
+  const response = await createApiCall({
+    url,
+    payload,
+    domainname: tenant.domainName,
+  });
 
   const { companyId, ...restBody } = response.body;
 

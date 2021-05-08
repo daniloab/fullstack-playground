@@ -1,5 +1,5 @@
-import { getOrCreate } from '@fullstack-playground/test';
-import { DeepPartial } from '@fullstack-playground/types';
+import { getOrCreate } from '@fp/test';
+import { DeepPartial } from '@fp/types';
 
 import UserModel, { IUser } from '../UserModel';
 import TenantModel from '../../tenant/TenantModel';

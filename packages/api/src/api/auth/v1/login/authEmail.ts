@@ -1,4 +1,4 @@
-import { UserModel } from '@fullstack-playground/modules';
+import { UserModel } from '@fp/modules';
 
 import { ERROR } from '../../../../common/consts';
 import { MESSAGE } from '../../../ApiHelpers';

@@ -1,5 +1,5 @@
-import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fullstack-playground/test';
-import { createUser, createTenant } from '@fullstack-playground/modules';
+import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fp/test';
+import { createUser, createTenant } from '@fp/modules';
 
 import { base64 } from '../../../../auth/base64';
 import { createGetApiCall } from '../../../../../test';
@@ -23,7 +23,11 @@ it('should return 400 if id is invalid', async () => {
 
   const url = getUrl('1');
 
-  const response = await createGetApiCall({ url, authorization, domainname: tenant.domainName });
+  const response = await createGetApiCall({
+    url,
+    authorization,
+    domainname: tenant.domainName,
+  });
 
   expect(response.status).toBe(400);
   expect(response.body.user).toBe(null);
@@ -41,7 +45,11 @@ it('should return user by object id', async () => {
 
   const url = getUrl(user._id.toString());
 
-  const response = await createGetApiCall({ url, authorization, domainname: tenant.domainName });
+  const response = await createGetApiCall({
+    url,
+    authorization,
+    domainname: tenant.domainName,
+  });
 
   expect(response.status).toBe(200);
   expect(response.body.user).not.toBe(null);

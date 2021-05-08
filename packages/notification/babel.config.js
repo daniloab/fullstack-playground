@@ -1,3 +1,3 @@
-const config = require('@fullstack-playground/babel');
+const config = require('@fp/babel');
 
 module.exports = config;

@@ -1,7 +1,7 @@
 import '@babel/polyfill';
 import { createServer } from 'http';
 
-import { connectDatabase } from '@fullstack-playground/shared';
+import { connectDatabase } from '@fp/shared';
 
 import { config } from '../config';
 

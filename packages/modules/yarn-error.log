@@ -28,13 +28,13 @@ Trace:
 
 npm manifest: 
   {
-    "name": "@fullstack-playground/modules",
+    "name": "@fp//modules",
     "version": "1.0.0",
     "main": "index.js",
     "author": "Danilo Assis",
     "license": "MIT",
     "devDependencies": {
-      "@fullstack-playground/babel": "*",
+      "@fp//babel": "*",
       "@types/babel__core": "7.1.3"
     },
     "scripts": {

@@ -1,6 +1,6 @@
-import { createTenant, createUser } from '@fullstack-playground/modules';
+import { createTenant, createUser } from '@fp/modules';
 
-import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fullstack-playground/test';
+import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fp/test';
 
 import { base64 } from '../../../../auth/base64';
 import { createApiCall } from '../../../../../test';
@@ -22,7 +22,12 @@ it('should return error if user was not passed', async () => {
 
   const payload = {};
 
-  const response = await createApiCall({ url, authorization, payload, domainname: tenant.domainName });
+  const response = await createApiCall({
+    url,
+    authorization,
+    payload,
+    domainname: tenant.domainName,
+  });
 
   expect(response.status).toBe(400);
   expect(response.body.message).toBe(MESSAGE.USER.MISSING);
@@ -39,7 +44,12 @@ it('should return error if email was not passed', async () => {
     },
   };
 
-  const response = await createApiCall({ url, authorization, payload, domainname: tenant.domainName });
+  const response = await createApiCall({
+    url,
+    authorization,
+    payload,
+    domainname: tenant.domainName,
+  });
 
   expect(response.status).toBe(400);
   expect(response.body.message).toBe(MESSAGE.COMMON.EMAIL);
@@ -57,7 +67,12 @@ it('should return error if email is not valid', async () => {
     },
   };
 
-  const response = await createApiCall({ url, authorization, payload, domainname: tenant.domainName });
+  const response = await createApiCall({
+    url,
+    authorization,
+    payload,
+    domainname: tenant.domainName,
+  });
 
   expect(response.status).toBe(400);
   expect(response.body.message).toBe(MESSAGE.COMMON.EMAIL_INVALID);
@@ -76,7 +91,12 @@ it('should return error if id passed is not object idvalid', async () => {
     },
   };
 
-  const response = await createApiCall({ url, authorization, payload, domainname: tenant.domainName });
+  const response = await createApiCall({
+    url,
+    authorization,
+    payload,
+    domainname: tenant.domainName,
+  });
 
   expect(response.status).toBe(400);
   expect(response.body.message).toBe(MESSAGE.COMMON.INVALID_ID);
@@ -95,7 +115,12 @@ it('should return error if id passed not found', async () => {
     },
   };
 
-  const response = await createApiCall({ url, authorization, payload, domainname: tenant.domainName });
+  const response = await createApiCall({
+    url,
+    authorization,
+    payload,
+    domainname: tenant.domainName,
+  });
 
   expect(response.status).toBe(400);
   expect(response.body.message).toBe(MESSAGE.USER.NOT_FOUND);
@@ -113,7 +138,12 @@ it('should return error for new user without pw', async () => {
     },
   };
 
-  const response = await createApiCall({ url, authorization, payload, domainname: tenant.domainName });
+  const response = await createApiCall({
+    url,
+    authorization,
+    payload,
+    domainname: tenant.domainName,
+  });
 
   expect(response.status).toBe(400);
   expect(response.body.message).toBe(MESSAGE.USER.PASSWORD);
@@ -132,7 +162,12 @@ it('should return OK for new user', async () => {
     },
   };
 
-  const response = await createApiCall({ url, authorization, payload, domainname: tenant.domainName });
+  const response = await createApiCall({
+    url,
+    authorization,
+    payload,
+    domainname: tenant.domainName,
+  });
 
   expect(response.status).toBe(200);
   expect(response.body.message).toBe('User successfully created');
@@ -152,7 +187,12 @@ it('should return ok for user updated', async () => {
     },
   };
 
-  const response = await createApiCall({ url, authorization, payload, domainname: tenant.domainName });
+  const response = await createApiCall({
+    url,
+    authorization,
+    payload,
+    domainname: tenant.domainName,
+  });
 
   expect(response.body.message).toBe('User successfully updated');
   expect(response.status).toBe(200);

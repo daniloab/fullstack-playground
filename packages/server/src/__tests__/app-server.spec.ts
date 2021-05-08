@@ -1,6 +1,6 @@
 import request from 'supertest';
 
-import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fullstack-playground/test';
+import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fp/test';
 
 import app from '../app';
 import { version } from '../../package.json';

@@ -1,4 +1,4 @@
-# @fullstack-playground/notification
+# @fp/notification
 
 Notification utilities to make testing easier
 

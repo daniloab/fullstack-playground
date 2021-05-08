@@ -1,5 +1,5 @@
 {
-  "name": "@fullstack-playground/shared",
+  "name": "@fp/shared",
   "version": "1.0.0",
   "dependencies": {
     "dotenv-safe": "^6.1.0",

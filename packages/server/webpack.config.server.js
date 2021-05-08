@@ -34,7 +34,7 @@ module.exports = {
     }),
     WebpackNodeExternals({
       modulesDir: path.resolve(__dirname, '../../node_modules'),
-      allowlist: [/@fullstack-playground/],
+      allowlist: [/@fp/],
     }),
   ],
   resolve: {
