@@ -1,5 +1,5 @@
 {
-  "name": "@fullstack-playground/api",
+  "name": "@fp/api",
   "version": "1.0.0",
   "description": "api package",
   "main": "index.js",
@@ -22,8 +22,8 @@
     "yup": "^0.29.1"
   },
   "devDependencies": {
-    "@fullstack-playground/babel": "*",
-    "@fullstack-playground/modules": "*",
+    "@fp/babel": "*",
+    "@fp/modules": "*",
     "babel-loader": "^8.0.6",
     "reload-server-webpack-plugin": "^1.0.1",
     "webpack": "4.39.1",

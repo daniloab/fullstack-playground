@@ -119,12 +119,12 @@ npm manifest:
       "jest": "jest",
       "lint:staged": "lint-staged",
       "prettier": "prettier --write --single-quote true --trailing-comma all --print-width 120",
-      "api": "yarn workspace @fullstack-playground/api start",
-      "build:modules": "yarn workspace @fullstack-playground/modules build",
-      "build:shared": "yarn workspace @fullstack-playground/shared build",
-      "build:types": "yarn workspace @fullstack-playground/types build",
-      "build:test": "yarn workspace @fullstack-playground/test build",
-      "server": "yarn workspace @fullstack-playground/server start"
+      "api": "yarn workspace @fp//api start",
+      "build:modules": "yarn workspace @fp//modules build",
+      "build:shared": "yarn workspace @fp//shared build",
+      "build:types": "yarn workspace @fp//types build",
+      "build:test": "yarn workspace @fp//test build",
+      "server": "yarn workspace @fp//server start"
     },
     "dependencies": {
       "bcryptjs": "^2.4.3",

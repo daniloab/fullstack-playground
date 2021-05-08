@@ -1,5 +1,5 @@
 {
-  "name": "@fullstack-playground/babel",
+  "name": "@fp/babel",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "@babel/plugin-proposal-optional-chaining": "7.7.5",
     "@babel/plugin-transform-flow-strip-types": "7.13.0",
     "@babel/preset-env": "7.14.1",
-    "@babel/preset-flow": "7.12.13",
+    "@babel/preset-flow": "7.13.13",
     "@babel/preset-react": "7.12.13",
     "@babel/preset-typescript": "7.7.7",
     "babel-plugin-require-context-hook": "1.0.0"

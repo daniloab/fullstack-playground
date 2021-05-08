@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import * as config from './config';
+import { config } from './config';
 
 export const connectDatabase = () => {
   return new Promise((resolve, reject) => {

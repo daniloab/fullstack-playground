@@ -1,8 +1,8 @@
 import { Types } from 'mongoose';
 
-import { createTenant, createUser } from '@fullstack-playground/modules';
+import { createTenant, createUser } from '@fp/modules';
 
-import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fullstack-playground/test';
+import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fp/test';
 
 import { base64 } from '../../../../auth/base64';
 import { MESSAGE } from '../../../ApiHelpers';

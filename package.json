@@ -1,5 +1,5 @@
 {
-  "name": "fullstack-playground",
+  "name": "fp",
   "version": "1.0.0",
   "description": "rest api with koa js",
   "main": "index.js",
@@ -16,7 +16,7 @@
     "@babel/plugin-transform-flow-strip-types": "7.13.0",
     "@babel/polyfill": "7.7.0",
     "@babel/preset-env": "7.14.1",
-    "@babel/preset-flow": "7.12.13",
+    "@babel/preset-flow": "7.13.13",
     "@babel/preset-react": "7.12.13",
     "@babel/preset-typescript": "7.7.7",
     "@babel/register": "7.7.7",
@@ -55,7 +55,7 @@
     "eslint-import-resolver-webpack": "0.11.1",
     "eslint-plugin-cypress": "2.2.1",
     "eslint-plugin-flowtype": "4.7.0",
-    "eslint-plugin-import": "2.18.0",
+    "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-node": "8.0.1",
     "eslint-plugin-prettier": "^3.1.0",
@@ -71,7 +71,7 @@
     "node-dev": "^7.0.0",
     "nodemon": "1.18.9",
     "pre-commit": "^1.2.2",
-    "prettier": "1.19.1",
+    "prettier": "2.2.1",
     "typescript": "3.7.2"
   },
   "pre-commit": "lint:staged",
@@ -92,15 +92,16 @@
     ]
   },
   "scripts": {
+    "api": "yarn workspace @fp/api start",
+    "build": "yarn build:modules && yarn build:shared && yarn build:types && yarn build:test",
+    "build:modules": "yarn workspace @fp/modules build",
+    "build:shared": "yarn workspace @fp/shared build",
+    "build:types": "yarn workspace @fp/types build",
+    "build:test": "yarn workspace @fp/test build",
     "jest": "jest",
     "lint:staged": "lint-staged",
     "prettier": "prettier --write --single-quote true --trailing-comma all --print-width 120",
-    "api": "yarn workspace @fullstack-playground/api start",
-    "build:modules": "yarn workspace @fullstack-playground/modules build",
-    "build:shared": "yarn workspace @fullstack-playground/shared build",
-    "build:types": "yarn workspace @fullstack-playground/types build",
-    "build:test": "yarn workspace @fullstack-playground/test build",
-    "server": "yarn workspace @fullstack-playground/server start"
+    "server": "yarn workspace @fp/server start"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

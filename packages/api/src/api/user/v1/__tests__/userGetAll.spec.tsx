@@ -1,5 +1,5 @@
-import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fullstack-playground/test';
-import { createUser, createTenant } from '@fullstack-playground/modules';
+import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose } from '@fp/test';
+import { createUser, createTenant } from '@fp/modules';
 
 import { base64 } from '../../../../auth/base64';
 import { createGetApiCall } from '../../../../../test';
@@ -178,7 +178,11 @@ it('should not return user from another tenant', async () => {
 
   const authorization = base64(`${tenant._id}:${user._id}`);
 
-  const response = await createGetApiCall({ url, authorization, domainname: tenant.domainName });
+  const response = await createGetApiCall({
+    url,
+    authorization,
+    domainname: tenant.domainName,
+  });
 
   expect(response.status).toBe(200);
   expect(response.body.users.length).toBe(1);

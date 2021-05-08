@@ -1,4 +1,4 @@
-import { UserModel } from '@fullstack-playground/modules';
+import { UserModel } from '@fp/modules';
 
 import { getPageInfo, getSkipAndLimit } from '../../ApiHelpers';
 import { AuthContext } from '../../../auth/auth';

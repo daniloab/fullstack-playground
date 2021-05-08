@@ -1,3 +1,3 @@
-# @fullstack-playground/test
+# @fp/test
 
 Test utilities to make testing easier

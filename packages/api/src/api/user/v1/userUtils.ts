@@ -1,11 +1,11 @@
-import { IUser, UserModel } from '@fullstack-playground/modules';
-import { DeepPartial } from '@fullstack-playground/types';
+import { IUser, UserModel } from '@fp/modules';
+import { DeepPartial } from '@fp/types';
 
 import * as yup from 'yup';
 
 import { Types } from 'mongoose';
 
-import { getObjectId } from '@fullstack-playground/test';
+import { getObjectId } from '@fp/test';
 
 import { MESSAGE } from '../../ApiHelpers';
 

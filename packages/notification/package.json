@@ -1,5 +1,5 @@
 {
-  "name": "@fullstack-playground/notification",
+  "name": "@fp/notification",
   "version": "1.0.0",
   "description": "notification package",
   "main": "index.js",
@@ -12,8 +12,8 @@
     "html-to-text": "^7.1.1"
   },
   "devDependencies": {
-    "@fullstack-playground/babel": "*",
-    "@fullstack-playground/modules": "*"
+    "@fp/babel": "*",
+    "@fp/modules": "*"
   },
   "scripts": {
     "start": "webpack --watch --progress --config webpack.config.api.js"
