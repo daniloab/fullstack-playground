@@ -17,7 +17,7 @@
     "@babel/polyfill": "7.7.0",
     "@babel/preset-env": "7.14.1",
     "@babel/preset-flow": "7.13.13",
-    "@babel/preset-react": "7.12.13",
+    "@babel/preset-react": "7.13.13",
     "@babel/preset-typescript": "7.7.7",
     "@babel/register": "7.7.7",
     "@types/babel__core": "7.1.14",
