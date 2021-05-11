@@ -3,7 +3,7 @@ import { UserModel } from '@fp/modules';
 import { ERROR } from '../../../../common/consts';
 import { MESSAGE } from '../../../ApiHelpers';
 
-const authEmail = async ctx => {
+const authEmail = async (ctx) => {
   const { tenant } = ctx;
   const { email } = ctx.request.body;
 
@@ -17,7 +17,6 @@ const authEmail = async ctx => {
     ctx.body = {
       status: ERROR,
       message: MESSAGE.LOGIN.INCORRECT,
-      user: null,
     };
     return;
   }
