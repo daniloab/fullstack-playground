@@ -18,7 +18,6 @@ exports[`should return error if user not found 1`] = `
 Object {
   "message": "Email or password incorrect",
   "status": "ERROR",
-  "user": null,
 }
 `;
 

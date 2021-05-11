@@ -28,8 +28,8 @@ type SesCall = {
 export const getEmailFromSes = (): SesCall[] => {
   let emails: SesCall = [];
 
-  SES.mock.results.map(result => {
-    result.value.sendEmail.mock.calls.map(call => {
+  SES.mock.results.map((result) => {
+    result.value.sendEmail.mock.calls.map((call) => {
       if (Array.isArray(call) && call.length > 0) {
         emails = [...emails, call[0]];
       }
@@ -39,7 +39,7 @@ export const getEmailFromSes = (): SesCall[] => {
   return emails;
 };
 
-it('should send email and validate href token', async () => {
+it.skip('should send email and validate href token', async () => {
   const token = 'token';
 
   const url = `https://fullstackplayground/login?token=${token}`;

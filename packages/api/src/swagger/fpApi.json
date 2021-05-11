@@ -1,0 +1,80 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Fullstack Playground",
+    "description": "Fullstack Playground api docs",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/auth/v1/login/email": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Login by Email",
+        "description": "Endpoint to login with email and validate it",
+        "requestBody": {
+          "description": "Data to do login by email",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "email": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "email": "test@test.com"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Email valid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "companyId": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "companyId": "9134e286-6f71-427a-bf00-241681624586",
+                    "message": "Email successful"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {},
+  "tags": []
+}
