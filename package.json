@@ -71,7 +71,7 @@
     "node-dev": "^7.0.0",
     "nodemon": "1.18.9",
     "pre-commit": "^1.2.2",
-    "prettier": "2.2.1",
+    "prettier": "2.3.0",
     "typescript": "4.2.4"
   },
   "pre-commit": "lint:staged",
