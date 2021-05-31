@@ -2,7 +2,6 @@
 
 node_modules
 .env
-config.ts
 
 build
 dist
