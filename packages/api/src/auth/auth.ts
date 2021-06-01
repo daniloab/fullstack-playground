@@ -38,5 +38,5 @@ const auth = async (ctx, next) => {
 export default auth;
 
 export const generateToken = (tenant: ITenant, user: IUser) => {
-  return `JWT ${jwt.sign({ tenant: tenant._id, user: user._id }, config.JWT_SECRET)}`;
+  return `JWT ${jwt.sign({ tenant: tenant._id, user: user._id }, config.JWT_KEY)}`;
 };
