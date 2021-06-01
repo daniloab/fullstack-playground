@@ -89,14 +89,13 @@ it('should return error if user password is wrong', async () => {
   expect(response.status).toBe(401);
 });
 
-// @todo fix check password
-it.skip('should made login with infos correct', async () => {
+it('should made login with infos correct', async () => {
   const tenant = await createTenant();
   const user = await createUser({ email: 'test@test.com', password: '123456' });
 
   const payload = {
     email: user.email,
-    password: user.password,
+    password: '123456',
     tenantId: tenant._id,
   };
 
