@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@babel/cli": "7.13.16",
+    "@babel/cli": "7.14.3",
     "@babel/core": "7.14.0",
     "@babel/node": "7.13.12",
     "@babel/plugin-proposal-class-properties": "7.13.0",
