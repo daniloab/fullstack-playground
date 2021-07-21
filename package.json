@@ -36,7 +36,7 @@
     "@types/koa-multer": "^1.0.0",
     "@types/koa-router": "^7.0.37",
     "@types/mongoose": "^5.3.7",
-    "@types/node": "^15.0.2",
+    "@types/node": "^16.4.0",
     "@typescript-eslint/eslint-plugin": "2.34.0",
     "@typescript-eslint/parser": "2.34.0",
     "babel-core": "^7.0.0-bridge.0",
