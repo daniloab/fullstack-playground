@@ -52,7 +52,7 @@
     "eslint-config-shellscape": "3.0.0",
     "eslint-import-resolver-lerna": "^1.1.0",
     "eslint-import-resolver-typescript": "2.4.0",
-    "eslint-import-resolver-webpack": "0.13.0",
+    "eslint-import-resolver-webpack": "0.13.1",
     "eslint-plugin-cypress": "2.11.3",
     "eslint-plugin-flowtype": "4.7.0",
     "eslint-plugin-import": "2.23.4",
