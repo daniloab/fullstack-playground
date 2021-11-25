@@ -2791,7 +2791,7 @@ abbrev@1:
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
   integrity sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==
 
-accepts@^1.3.5:
+accepts@^1.3.5, accepts@^1.3.7:
   version "1.3.7"
   resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.7.tgz#531bc726517a3b2b41f850021c6cc15eaab507cd"
   integrity sha512-Il80Qs2WjYlJIBNzNkK6KYqlVMTbZLXgHx2oT0pU/fjRHyEp+PEfEPY0R3WCwAGVOtauxh1hOxNgIf5bv7dQpA==
@@ -2951,7 +2951,7 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-any-promise@^1.0.0, any-promise@^1.1.0:
+any-promise@^1.1.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/any-promise/-/any-promise-1.3.0.tgz#abc6afeedcea52e809cdc0376aed3ce39635d17f"
   integrity sha1-q8av7tzqUugJzcA3au0845Y10X8=
@@ -3667,6 +3667,11 @@ bytes@3.1.0, bytes@^3.0.0, bytes@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.1.0.tgz#f6cf7933a360e0588fa9fde85651cdc7f805d1f6"
   integrity sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
+
+bytes@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.1.1.tgz#3f018291cb4cbad9accb6e6970bca9c8889e879a"
+  integrity sha512-dWe4nWO/ruEOY7HkUJ5gFt1DCFV9zPRoJr8pV0/ASQermOZjtq8jMjOprC0Kd10GLN+l7xaUPvxzJFWtxGu8Fg==
 
 cacache@^12.0.2:
   version "12.0.4"
@@ -5645,15 +5650,15 @@ expect@^26.6.2:
     jest-message-util "^26.6.2"
     jest-regex-util "^26.0.0"
 
-express-graphql@0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/express-graphql/-/express-graphql-0.7.1.tgz#6c7712ee966c3aba1930e064ea4c8181e56fd3ef"
-  integrity sha512-YpheAqTbSKpb5h57rV2yu2dPNUBi4FvZDspZ5iEV3ov34PBRgnM4lEBkv60+vZRJ6SweYL14N8AGYdov7g6ooQ==
+express-graphql@0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/express-graphql/-/express-graphql-0.12.0.tgz#58deabc309909ca2c9fe2f83f5fbe94429aa23df"
+  integrity sha512-DwYaJQy0amdy3pgNtiTDuGGM2BLdj+YO2SgbKoLliCfuHv3VVTt7vNG/ZqK2hRYjtYHE2t2KB705EU94mE64zg==
   dependencies:
-    accepts "^1.3.5"
+    accepts "^1.3.7"
     content-type "^1.0.4"
-    http-errors "^1.7.1"
-    raw-body "^2.3.3"
+    http-errors "1.8.0"
+    raw-body "^2.4.1"
 
 ext@^1.1.2:
   version "1.4.0"
@@ -6547,7 +6552,7 @@ http-errors@1.7.3, http-errors@~1.7.2:
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
 
-http-errors@^1.6.3, http-errors@^1.7.1, http-errors@^1.7.3:
+http-errors@1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/http-errors/-/http-errors-1.8.0.tgz#75d1bbe497e1044f51e4ee9e704a62f28d336507"
   integrity sha512-4I8r0C5JDhT5VkvI47QktDW75rNlGVsUf/8hzjCC/wkWI/jdTRmBb9aI7erSG82r1bjKY3F6k28WnsVxB1C73A==
@@ -6557,6 +6562,17 @@ http-errors@^1.6.3, http-errors@^1.7.1, http-errors@^1.7.3:
     setprototypeof "1.2.0"
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
+
+http-errors@1.8.1, http-errors@^1.6.3, http-errors@^1.7.3:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/http-errors/-/http-errors-1.8.1.tgz#7c3f28577cbc8a207388455dbd62295ed07bd68c"
+  integrity sha512-Kpk9Sm7NmI+RHhnj6OIWDI1d6fIoFAtFt9RLaTMRlg/8w49juAStsrBgp0Dp4OdxdVbRIeKhtCUvoi/RuAhO4g==
+  dependencies:
+    depd "~1.1.2"
+    inherits "2.0.4"
+    setprototypeof "1.2.0"
+    statuses ">= 1.5.0 < 2"
+    toidentifier "1.0.1"
 
 http-errors@~1.6.2:
   version "1.6.3"
@@ -7977,15 +7993,13 @@ koa-cors@^0.0.16:
   resolved "https://registry.yarnpkg.com/koa-cors/-/koa-cors-0.0.16.tgz#98107993a7909e34c042986c5ec6156d77f3432e"
   integrity sha1-mBB5k6eQnjTAQphsXsYVbXfzQy4=
 
-koa-graphql@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/koa-graphql/-/koa-graphql-0.8.0.tgz#82afc2521bae38db0ed09cdb6c8a73c60136c1bd"
-  integrity sha512-mzXQjRQxcxKM78Ds/0/JEfy4DCt+ZxLKhCjjWsqpLtXie/b8LeF1MGiLYRIMKaw61ZbODLs3+WMdf1DJn1KhEA==
+koa-graphql@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/koa-graphql/-/koa-graphql-0.11.0.tgz#921affd301a18aa8c5f48645ce6494f90e1e3c28"
+  integrity sha512-WLNZDnCdrYILtM4D3y9NwtutWBfMs4SeZq+n19H5FlT09jY7n1L5kpPo4GRKIJO/utbsQ/2cPFPst6gGV4YUkQ==
   dependencies:
-    babel-runtime "^6.26.0"
-    express-graphql "0.7.1"
-    http-errors "^1.7.1"
-    thenify "^3.3.0"
+    express-graphql "0.12.0"
+    http-errors "^1.7.3"
 
 koa-is-json@^1.0.0:
   version "1.0.0"
@@ -10281,6 +10295,16 @@ raw-body@^2.3.3:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+raw-body@^2.4.1:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.4.2.tgz#baf3e9c21eebced59dd6533ac872b71f7b61cb32"
+  integrity sha512-RPMAFUJP19WIet/99ngh6Iv8fzAbqum4Li7AD6DtGaW2RpMB/11xDoalPiJMTbu6I3hkbMVkATvZrqb9EEqeeQ==
+  dependencies:
+    bytes "3.1.1"
+    http-errors "1.8.1"
+    iconv-lite "0.4.24"
+    unpipe "1.0.0"
+
 rc@^1.0.1, rc@^1.1.6:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"
@@ -11801,13 +11825,6 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-thenify@^3.3.0:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/thenify/-/thenify-3.3.1.tgz#8932e686a4066038a016dd9e2ca46add9838a95f"
-  integrity sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==
-  dependencies:
-    any-promise "^1.0.0"
-
 throat@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/throat/-/throat-5.0.0.tgz#c5199235803aad18754a667d659b5e72ce16764b"
@@ -11918,6 +11935,11 @@ toidentifier@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
   integrity sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
+
+toidentifier@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.1.tgz#3be34321a88a820ed1bd80dfaa33e479fbb8dd35"
+  integrity sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==
 
 toposort@^2.0.2:
   version "2.0.2"
