@@ -8,7 +8,7 @@
   "module": "src/index.ts",
   "devDependencies": {
     "@fp/babel": "*",
-    "@types/babel__core": "7.1.14"
+    "@types/babel__core": "7.1.17"
   },
   "scripts": {
     "build": "babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" --ignore *.spec.js --out-dir dist --copy-files --source-maps --verbose"
