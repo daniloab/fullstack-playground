@@ -1,42 +1,8 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "09:00"
-  open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: y18n
-    versions:
-    - 4.0.1
-    - 4.0.2
-  - dependency-name: "@babel/cli"
-    versions:
-    - 7.13.10
-  - dependency-name: html-to-text
-    versions:
-    - 7.0.0
-  - dependency-name: "@babel/preset-env"
-    versions:
-    - 7.13.10
-    - 7.13.5
-  - dependency-name: "@babel/node"
-    versions:
-    - 7.13.0
-    - 7.13.10
-  - dependency-name: "@types/babel__core"
-    versions:
-    - 7.1.12
-  - dependency-name: urijs
-    versions:
-    - 1.19.5
-  - dependency-name: "@babel/preset-flow"
-    versions:
-    - 7.12.1
-  - dependency-name: "@types/babel__generator"
-    versions:
-    - 7.6.2
-  - dependency-name: lodash
-    versions:
-    - 4.17.20
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "01:00"
+    open-pull-requests-limit: 10
