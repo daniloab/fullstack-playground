@@ -5269,10 +5269,10 @@ eslint-config-shellscape@3.0.0:
     eslint-plugin-prettier "^3.1.0"
     prettier "^2.2.1"
 
-eslint-import-resolver-lerna@^1.1.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-import-resolver-lerna/-/eslint-import-resolver-lerna-1.1.1.tgz#6b3047cd686e32f20b890a4fc7d2f6d8147d1dd1"
-  integrity sha512-N4ArpsSRWLYrHfGbet2THqFuo44KgKsVNQ9sB9O+1qd14ytYKdgP90B/te5Lkomg8nzUrP7kvjMXBSU26QCXcg==
+eslint-import-resolver-lerna@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-import-resolver-lerna/-/eslint-import-resolver-lerna-2.0.0.tgz#a96a6eaa9c467d9bf195f538fa6c11cdbd95f5da"
+  integrity sha512-TJ//wx/tDR6SrSXMuORcc7dwQJQrkgf0AT7cnRD/ADEBpe9sLHc4rbh2JxVYRDw6rauHHxcvdYb4EICT+xd63Q==
 
 eslint-import-resolver-node@^0.3.4:
   version "0.3.4"
