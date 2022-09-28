@@ -15,7 +15,7 @@
     "@babel/plugin-proposal-export-namespace-from": "7.12.13",
     "@babel/plugin-transform-flow-strip-types": "7.16.7",
     "@babel/polyfill": "7.12.1",
-    "@babel/preset-env": "7.14.1",
+    "@babel/preset-env": "7.19.3",
     "@babel/preset-flow": "7.13.13",
     "@babel/preset-react": "7.16.7",
     "@babel/preset-typescript": "7.7.7",
